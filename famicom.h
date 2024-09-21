@@ -17,4 +17,4 @@ enum Famicom_mmap
   fc_cartridge
 };
 
-byte Famicom_mmap_get(union Famicom* famicom, word addr, enum get_or_set g);
+

@@ -27,27 +27,28 @@ byte Famicom_mem (union Famicom* famicom, word addr, enum get_or_set g, byte val
   {
   case fc_ram:
     if (g == get)
-      return famicom.ram[addr];
+      return famicom->ram[addr];
     else if (g == set)
-      famicom.ram[addr] = value;
+      famicom->ram[addr] = value;
     break;
   case fc_ram_mirrored:
     if (g == get)
-      return famicom.ram[addr&0x00FF];
+      return famicom->ram[addr&0x00FF];
     else if (g == set)
-      famicom.ram[addr&0x00FF] = value;
+      famicom->ram[addr&0x00FF] = value;
     break;
   case fc_ppu:
     if (g == get)
-      return famicom.ppureg[(addr&0xF)%9];
+      return famicom->ppureg[(addr&0xF)%9];
     else if (g == set)
-      famicom.ppureg[(addr&0xF)%9] = value;
+      famicom->ppureg[(addr&0xF)%9] = value;
     break;
   case fc_ppu_mirrored:
     if (g == get)
-      return famicom.ppureg[(addr&0xF)%9];
+      return famicom->ppureg[(addr&0xF)%9];
     if (g == set)
-      famicom.ppureg[(addr&0xF)%9] = value;
+      famicom->ppureg[(addr&0xF)%9] = value;
   case fc_apu:
+    
   }
 }

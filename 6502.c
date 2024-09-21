@@ -92,11 +92,27 @@ op_6502 cpu_6502_op_decode(byte opcode)
   return cpu_6502_opcodes[0]; // Unimplemented
 }
 
-void cpu_6502_op(struct cpu_6502* cpu, op_6502 op)
+void cpu_6502_poke(struct cpu_6502* cpu, enum cpu_6502_a a)
+{
+
+}
+
+byte cpu_6502_addr(struct cpu_6502* cpu, enum cpu_6502_a a)
+{
+}
+
+void cpu_6502_op(struct cpu_6502* cpu, op_6502 op, byte* ram)
 {
   switch(op.o)
   {
   case ADC:
     break;
+  case AND:
+    break;
+  case ASL:
+    break;
+  case BCC:
+    break;
+    
   }
 }

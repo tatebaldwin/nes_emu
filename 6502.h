@@ -14,12 +14,6 @@ enum cpu_6502_registers
   reg_sr
 };
 
-enum get_or_set
-{
-  get,
-  set
-};
-
 enum cpu_6502_a
 {
   a, imp, imm, abs_, zp, rel,
